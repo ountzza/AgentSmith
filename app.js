@@ -2,8 +2,12 @@
 
 var React = require('react');
 
-var HellNeoLable = require('./components/HelloNeoLable');
+var HelloNeoLable = require('./components/HelloNeoLable');
 
 React.render(
-  <HellNeoLable />,document.getElementById('app')
+  <HelloNeoLable/>,document.getElementById('app');
+);
+
+React.render(
+  <The Matrix is real />,document.getElementById('app2');
 );

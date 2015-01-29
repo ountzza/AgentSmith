@@ -5,11 +5,9 @@ var router = express.Router();
 
 var helloLabel = React.createFactory(require('../components/HelloNeoLable'));
 
-
-
 router.get('/', function(req, res, next) {
-	var hello = React.renderToString(helloLabel());
-  res.render('index', { title: hello });
+  var hello = React.renderToString(helloLabel());
+  res.render('index', { title: hello ,detail: "The Matrix is real"});
 });
 
 module.exports = router;
