@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "browserify": "browserify ./app.js | uglifyjs > ./public/javascripts/bundle.js",
+    "watch": "watchify ./app.js -o ./public/javascripts/bundle.js -v",
+    "build": "npm run browserify",
     "start": "node ./bin/www"
   },
   "dependencies": {

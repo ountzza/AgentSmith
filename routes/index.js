@@ -1,9 +1,15 @@
+require('node-jsx').install();
 var express = require('express');
+var React = require('react');
 var router = express.Router();
 
-/* GET home page. */
+var helloLabel = React.createFactory(require('../components/HelloNeoLable'));
+
+
+
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'AgentSmith' });
+	var hello = React.renderToString(helloLabel());
+  res.render('index', { title: hello });
 });
 
 module.exports = router;
